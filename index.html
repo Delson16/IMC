@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+</head>
+
+<body>
+        <h1>IMC - índice de massa corporal</h1>
+        <div class="calculator">
+            <label for="altura">Altura</label>
+            <input type="number" name="" id="altura" placeholder="Digite sua altura">
+            <label for="peso">Peso (KG)</label>
+            <input type="number" name="" id="peso" placeholder="Digite seu peso">
+            <button onclick="calcularImc()">Calcular</button>
+            <p>Seu índice de massa corporal:</p>
+            <span id="resultado"></span>
+        </div>
+
+<script>
+        function calcularImc() {
+            const altura = document.getElementById("altura").value;
+            const peso = document.getElementById("peso").value;
+            // Além de poder multiplicar a altua por ela mesam, podes-e utilizar duas vese o simbolo de multiplicação, representando uma potência, seguida pelo seu expoente. 
+            const imc = peso / (altura ** 2);
+
+            document.getElementById("resultado").textContent = imc.toFixed(2);
+        }
+    </script>
+
+
+
+</body>
+
+</html>
